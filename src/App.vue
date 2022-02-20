@@ -9,10 +9,10 @@
       <router-link :to="`/users/${i}`">使用者：{{ i }}</router-link>
     </li>
 
-    <!-- <br>
+    <br>
     <li v-for="i in 5" :key="i">
       <router-link :to="`/products/${i}`">第{{ i }}個</router-link>
-    </li> -->
+    </li>
   </nav>
   <router-view/>
   <router-view name="CommentView"></router-view>
