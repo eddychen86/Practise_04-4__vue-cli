@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import TestView from '../views/TestView.vue';
 import ProductView from '../views/ProductView.vue';
+import CommentView from '../views/CommentView.vue';
 
 const routes = [
   {
@@ -25,6 +26,12 @@ const routes = [
   {
     path: '/products/:productId',
     component: ProductView,
+    children: [
+      {
+        path: 'comments',
+        component: CommentView,
+      },
+    ],
   },
 ];
 
