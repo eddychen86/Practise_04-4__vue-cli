@@ -1,4 +1,5 @@
 <template>
+  {{ $store.state.message }}
   <h1>UserId: {{ $route.params.UserId }}</h1>
   <div>Name: {{ userInfo.name }}</div>
   <div>Email: {{ userInfo.email }}</div>
