@@ -26,12 +26,10 @@ const routes = [
   {
     path: '/products/:productId',
     component: ProductView,
-    children: [
-      {
-        path: 'comments',
-        component: CommentView,
-      },
-    ],
+  },
+  {
+    path: '/products/:productId/comments',
+    component: CommentView,
   },
 ];
 
