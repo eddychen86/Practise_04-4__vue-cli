@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue';
 import TestView from '../views/TestView.vue';
 import ProductView from '../views/ProductView.vue';
 import CommentView from '../views/CommentView.vue';
+import UserView from '../views/UserView.vue';
+import TodoView from '../views/TodoView.vue';
 
 const routes = [
   {
@@ -30,6 +32,17 @@ const routes = [
   {
     path: '/products/:productId/comments',
     component: CommentView,
+  },
+  {
+    path: '/users/:userId',
+    name: 'users',
+    component: UserView,
+    children: [
+      {
+        path: 'todos',
+        component: TodoView,
+      },
+    ],
   },
 ];
 
