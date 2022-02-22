@@ -40,7 +40,9 @@
     methods: {
       fetchUserInfo(id) {
         axios
+        // .get 是要擷取指定 API 的資料
         .get(`https://jsonplaceholder.typicode.com/users/${id}`)
+        // .then 為擷取資料後，要去執行的動作
         .then(response => this.userInfo = response.data)
       }
     }
